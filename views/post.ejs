@@ -1,0 +1,142 @@
+<%- include('./partials/header.ejs'); %>
+			<div class="main_header">
+				<div class="left_nav">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Reports</a></li>
+						<li><a href="#">Explore</a></li>
+						<li><a href="#" id="logout">Logout</a></li>
+					</ul>
+				</div>
+				<div class="right_nav">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="./img/setting.png" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/notification.png" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/addUser.png" alt="">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- request handling area -->
+	<section class="post">
+		<div class="container">
+			<div class="post_area">
+				<div class="working_area">
+					<div class="work_header">
+						<img src="./img/user.png" alt="" />
+						<h2>My Workplaces</h2>
+					</div>
+					<div class="work_footer">
+						<div class="work_nav_area">
+							<ul>
+								<li class="collection">
+									<img src="./img/collection.png" alt="" />
+									<p>Collections</p>
+								</li>
+								<li class="api">
+									<img src="./img/api.png" alt="" />
+									<p>Apis</p>
+								</li>
+								<li class="history rm-border-bottom">
+									<img src="./img/history.png" alt="" />
+									<p>Historys</p>
+								</li>
+							</ul>
+						</div>
+						<div class="result">
+							<div class="result_header">
+								<h2>All Collections</h2>
+							</div>
+							<div class="show_result">
+								<img src="./img/result-collection.png" alt="">
+								<p>you have historical collection hear you can see</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="posting_area">
+					<div class="url_request_area">
+						<div class="input_all_request">
+							<div class="value_of_user">
+								<p class="method">GET</p>
+								<p class="input">Take new route</p>
+							</div>
+							<div class="img"></div>
+						</div>
+						<div class="add_request">
+							<img src="./img/add.png" class="add" alt="" />
+						</div>
+					</div>
+					<div class="url_writing_area">
+						<form action="">
+							<div id="method">
+								<span class="set_method_result">GET</span>
+								<img src="./img/down.png" alt="" />
+								<ul class="user_method">
+									<li>GET</li>
+									<li>POST</li>
+									<li>PUT</li>
+									<li>PATCH</li>
+									<li>DELETE</li>
+								</ul>
+							</div>
+							<input type="text" name="url" id="url" placeholder="Enter your URL" />
+							<button type="submit" class="btn">Send</button>
+						</form>
+						<div class="set_request_options">
+							<div class="request_nav">
+								<ul>
+									<li class="headersOfequest">Headers</li>
+									<li>Body</li>
+									<li>Nots</li>
+									<li>Settings</li>
+								</ul>
+							</div>
+							<div class="request_nav_result">
+								<div class="type">Headers</div>
+								<div class="key_value_input">
+									<div class="title" style="display: flex">
+										<span>Key</span>
+										<span class="value">Value</span>
+									</div>
+									<form id="key_value">
+										<input type="text" placeholder="Key">
+										<input type="text" placeholder="Value" class="value">
+										<button class="addHeader" type="submit">Add</button>
+									</form>
+									<div class="valueOfRequest title"></div>
+								</div>
+								<div class="setting">Don't have any <span>setting</span> of before!</div>
+								<div class="reqBody"><textarea name="body" id="inputOfBody" rows="" cols="" placeholder="Keep you request body"></textarea></div>
+							</div>
+						</div>
+						<div class="set_respons_options">
+							<h3>Responses</h3>
+							<div class="show_response"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Project -->
+	<script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/configRequest.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/api.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/logout.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

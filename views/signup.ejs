@@ -1,0 +1,100 @@
+<%- include('./partials/header.ejs'); %>
+
+			<div class="main_signup">
+				<div class="section">
+					<div class="title_of_signup">
+						<div class="logo">
+							<h1>Dev<span>Post</span></h1>
+						</div>
+						<div class="doc">
+							<h2>Why sing in?</h2>
+							<ul>
+								<li>This application created for experience.</li>
+								<li>hear you can see source code and devloped more better application</li>
+								<li>This application you can use for Building, Developing, learning. and you try to use it first you have to sign in so,</li>
+								<li>Let's started!</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form">
+						<form action="">
+							<h1>Create devpost account   <a href="/login">Sign in</a></h1>
+							<p>Email</p>
+							<input type="email" name="email" id="signupEmail" />
+							<p>Username</p>
+							<input type="text" name="username" id="username">
+							<p>Password</p>
+							<input type="password" name="password" id="password" value="" />
+							<p class="pr">Password length would be minimum 5 and maximum 15 character</p>
+							<p class="pr">By creating you account, I agree to you <span>private police</span></p>
+							<input type="button" value="Creat New Account" class="btn">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Project -->
+	<script>
+		class Signup {
+			constructor() {
+				this.email = document.querySelector('#signupEmail');
+				this.username = document.querySelector('#username');
+				this.password = document.querySelector('#password');
+				this.btn = document.querySelector('.btn');
+			}
+			
+			exit() {
+				this.btn.addEventListener('click', async (e) => {
+					e.preventDefault();
+					
+					const email = this.email.value
+					const username = this.username.value
+					const password = this.password.value
+					
+					if (email && username && password) {
+						const test = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+						const testResult = test.test(email);
+						
+						if (testResult) {
+							let data = {
+								email,
+								username,
+								password
+							}
+							
+							const response = await fetch("/signup", {
+								method: "POST",
+								headers: {
+									"Content-Type": "application/json",
+								},
+								body: JSON.stringify(data)
+							})
+							
+							const resData = await response.json();
+							
+							if ( resData.success && resData.success.message ) {
+								swal("Signup successful!", "success")
+								location.replace("/login")
+							} else {
+								swal("Signup falied!", resData.error.message, "error");
+								setTimeout(() => location.reload(), 1000)
+							}
+							
+						} else {
+							swal("Sign up falied!", "Required validate email for sign up", "error");
+						}
+						
+					} else {
+						swal("Sign up falied!", "Required all input for sign up", "error");
+					}
+				})
+				
+			}
+		}
+		
+		(new Signup).exit()
+	</script>
+</body>
+
+</html>

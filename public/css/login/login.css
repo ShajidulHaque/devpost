@@ -1,0 +1,83 @@
+.main_login {
+	width: 100%;
+	height: 600px;
+	background: #eee;
+	padding: 10% 0;
+}
+
+.main_login .bg {
+	width: 300px;
+	height: 100%;
+	margin: 0 auto;
+	background: #fff;
+	filter: drop-shadow(0 0 10px #123);
+	border-radius: 5px;
+	padding: 40px 30px;
+}
+
+.bg h1 {
+	color: #444;
+	text-align: center;
+}
+
+.bg h1 span {
+	font-size: inherit;
+	color: #fc804a
+}
+
+.main_login .bg .login_title {
+	display: flex;
+	padding-top: 20px;
+}
+
+.login_title h1 {
+	flex-basis: 55%;
+	color: #444;
+	text-align: left;
+}
+
+.login_title a {
+	flex-basis: 50%;
+	text-align: right;
+	color: #fc804a
+}
+
+.main_login .bg form {
+	width: 100%;
+	height: 90%;
+	padding-top: 35px;
+}
+
+.main_login .bg form p {
+	color: #444;
+	margin-top: 7px;
+}
+
+.main_login .bg form input {
+	width: 100%;
+	height: 40px;
+	border: 0.5px solid #444;
+	border-radius: 3px;
+	padding-left: 4px;
+}
+
+.main_login .bg form #btn {
+	background: #fc804a;
+	border: 0;
+	color: #fff;
+	font-weight: bold;
+}
+
+.main_login .bg form .check {
+	display: flex;
+}
+
+.main_login .bg form .check input {
+	width: 17px;
+}
+
+.main_login .bg form .check span {
+	display: flex;
+	align-items: center;
+	padding: 0 4px;
+}

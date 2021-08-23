@@ -1,0 +1,66 @@
+<%- include('./partials/header.ejs'); %>
+			<div class="main_home">
+				<div class="nav_area">
+					<div class="logo">Devpost</div>
+					<div class="nav">
+						<ul>
+							<li><a href="/login">Sign in</a></li>
+							<li class="li"><a href="/signup" style="color: #fff">Creat new account</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="app">
+					<div class="title">
+						<h1><span>Build</span>_</br> APIs together</h1>
+						<p>It can help your </p>
+						<p>building developing testing your APIs.</p>
+					</div>
+					<div class="input">
+						<input type="email" name="email" id="email" value="" placeholder="devapp@example.com" />
+						<input type="button" name="signup" id="signup" value="SignUp for free" />
+					</div>
+				</div>
+				<div class="info">
+					<div>
+						<h2>Why devpost is?</h2>
+						<p>This is a simple application created for api devloper and inspired by posman. So, you can create an account sothat
+							you use the application also use it of your regular use case.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Project -->
+	<script>
+		class Home {
+			constructor() {
+				this.input = document.querySelector('.input');
+			}
+		
+			exc() {
+				this.input.children[1].addEventListener('click', () => {
+					const value = this.input.children[0].value;
+					
+					if ( value ) {
+						const validation = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+						const testResult = validation.test(value);
+						
+						if ( testResult ) {
+							location.replace('/signup');
+						} else {
+							swal("Falled request!", "required validate emali", "error");
+							this.input.children[0].value = '';
+						}
+					} else {
+						swal("Failed request!", "required emali address", "error");
+					}
+				})
+			}
+		}
+		
+		(new Home).exc()
+	</script>
+</body>
+
+</html>

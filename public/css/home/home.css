@@ -1,0 +1,109 @@
+.main_home {
+	width: 100%;
+	padding: 1% 5%;
+}
+
+.nav_area {
+	display: flex;
+}
+
+.nav_area .logo {
+	flex-basis: 30%;
+	font-weight: bold;
+	padding: 7px 0px;
+	color: #444
+}
+
+.nav_area .nav {
+	flex-basis: 70%;
+}
+
+.nav ul {
+	display: inline-block;
+	float: right;
+	list-style: none;
+}
+
+.nav ul li {
+	display: inline-block;
+	border-radius: 3px;
+	padding: 7px 10px;
+	margin: 0 5px;
+	font-weight: bold;
+	color: #444;
+}
+
+.nav ul li a {
+	text-decoration: none;
+	color: #444;
+}
+
+.nav ul .li {
+	background: #fc804a;
+	color: #fff;
+}
+
+.app {
+	
+}
+
+.app .title {
+	width: 100%;
+	padding: 20px 0;
+}
+
+.app .title h1 {
+	font-size: 25px;
+	color: #444;
+	margin-bottom: 5px;
+}
+
+.app .title h1 span {
+	font-size: 25px;
+}
+
+.app .title p {
+	font-size: 18px;
+	color: #444;
+}
+
+.app .input {
+	width: 100%;
+	
+}
+
+.app .input input {
+	display: block;
+	width: 250px;
+	padding: 6px 4px;
+	margin: 5px 0;
+	border: 2px solid #fc804a;
+	border-radius: 5px;
+	margin: 7px 0;
+}
+
+.app .input #signup {
+	background: #fc804a;
+	border: 0;
+	color: #fff;
+	font-weight: bold;
+	
+}
+
+.info {
+	
+}
+
+.info div {
+	width: 50%;
+	float: right;
+	color: #444;
+}
+
+.info div h2 {
+	margin-top: 20px;
+}
+
+.info div p {
+	margin-top: 10px;
+}
